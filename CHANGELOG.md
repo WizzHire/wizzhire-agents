@@ -3,7 +3,7 @@
 ## Unreleased
 
 - "Try it without installing": connector steps and starter prompts in the README, and [PROMPTS.md](PROMPTS.md) with 20 prompts for every hiring flow.
-- Connector instructions now say **Settings > Plugins > Add custom connector**.
+- Connector instructions now say: open [claude.ai/plugins](https://claude.ai/plugins), click **Add**, then **Add custom connector**.
 - Issue templates, a security policy and this changelog.
 - The tool check now also checks arguments and allowed values, not only tool names.
 
