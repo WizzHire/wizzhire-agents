@@ -4,443 +4,1554 @@
  "tools": [
   {
    "name": "list_my_companies",
-   "read_only": true
+   "read_only": true,
+   "args": {}
   },
   {
    "name": "wizzhire_guide",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "topic": []
+   }
   },
   {
    "name": "list_jobs",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "page": [],
+    "page_size": [],
+    "openness": [
+     "active",
+     "all",
+     "closed"
+    ],
+    "search": []
+   }
   },
   {
    "name": "get_job",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "job": []
+   }
   },
   {
    "name": "search_talent_pool",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "search": [],
+    "skills": [],
+    "country": [],
+    "languages": [],
+    "min_years": [],
+    "tags": [],
+    "outcomes": [],
+    "revisit": [],
+    "active_within_months": [],
+    "sort": [],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "create_job_draft",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "title": [],
+    "description": [],
+    "employment_type": [],
+    "work_mode": [],
+    "experience_level": [],
+    "salary_min": [],
+    "salary_max": [],
+    "currency": [],
+    "salary_period": [],
+    "show_salary": [],
+    "skills": [],
+    "requirements": [],
+    "number_of_hires": [],
+    "visibility": [
+     "private",
+     "public"
+    ],
+    "closes_on": [],
+    "cv": [],
+    "cover_letter": [],
+    "salary_expectation": [],
+    "questionnaire_id": [],
+    "copy_stages_from_job_id": []
+   }
   },
   {
    "name": "list_candidates",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "job": [],
+    "page": [],
+    "page_size": [],
+    "favorites_only": []
+   }
   },
   {
    "name": "get_candidate",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "application_id": []
+   }
   },
   {
    "name": "read_application",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "application_id": []
+   }
   },
   {
    "name": "compare_candidates",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "application_ids": []
+   }
   },
   {
    "name": "candidate_sources",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "job": [],
+    "days": []
+   }
   },
   {
    "name": "rate_candidate",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "application_id": [],
+    "rating": []
+   }
   },
   {
    "name": "add_candidate_note",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "application_id": [],
+    "note": []
+   }
   },
   {
    "name": "star_candidate",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "application_id": []
+   }
   },
   {
    "name": "review_queue",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "job": [],
+    "limit": [],
+    "stale_after_days": [],
+    "only_sitting_too_long": []
+   }
   },
   {
    "name": "list_my_tasks",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "scope": [
+     "all",
+     "closed",
+     "open"
+    ],
+    "module": [],
+    "due": [
+     "any",
+     "later",
+     "none",
+     "overdue",
+     "today",
+     "week"
+    ],
+    "priority": [
+     "high",
+     "normal",
+     "urgent"
+    ],
+    "search": [],
+    "delegated": [],
+    "sort": [
+     "created_at",
+     "due_date",
+     "priority"
+    ],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "prepare_employee_import",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "employees": [],
+    "mode": [
+     "check",
+     "submit"
+    ],
+    "create_missing_departments": []
+   }
   },
   {
    "name": "get_employee_overview",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "employee": []
+   }
   },
   {
    "name": "list_employees",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "page": [],
+    "page_size": [],
+    "sort": [
+     "department",
+     "last_name",
+     "leave",
+     "manager",
+     "start_date",
+     "status"
+    ],
+    "direction": [
+     "asc",
+     "desc"
+    ],
+    "search": [],
+    "status": [],
+    "department": [],
+    "no_department": [],
+    "manager": [],
+    "contract_type": []
+   }
   },
   {
    "name": "list_my_team",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "include_indirect": []
+   }
   },
   {
    "name": "list_leave_requests",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "scope": [
+     "company",
+     "team"
+    ],
+    "status": [
+     "approved",
+     "cancelled",
+     "rejected",
+     "submitted"
+    ],
+    "employee": [],
+    "date_from": [],
+    "date_to": [],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "decide_leave_request",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "request_id": [],
+    "decision": [
+     "approve",
+     "reject"
+    ],
+    "note": []
+   }
   },
   {
    "name": "assign_shifts",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "people": [],
+    "shift": [],
+    "date_from": [],
+    "date_to": [],
+    "replace": []
+   }
   },
   {
    "name": "swap_shifts",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "first": [],
+    "second": [],
+    "date_from": [],
+    "date_to": []
+   }
   },
   {
    "name": "review_timesheet_day",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "day": [],
+    "employee": [],
+    "page": []
+   }
   },
   {
    "name": "fill_timesheet_day",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "day": [],
+    "employees": [],
+    "start_time": [],
+    "end_time": [],
+    "break_minutes": [],
+    "page": []
+   }
   },
   {
    "name": "record_timesheet_day",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "employee": [],
+    "day": [],
+    "start_time": [],
+    "end_time": [],
+    "break_minutes": [],
+    "note": [],
+    "overtime_minutes": []
+   }
   },
   {
    "name": "undo_timesheet_day",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "day": [],
+    "employees": [],
+    "page": []
+   }
   },
   {
    "name": "list_crm_boards",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": []
+   }
   },
   {
    "name": "crm_board",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "board_id": []
+   }
   },
   {
    "name": "list_clients",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "lead_status": [
+     "contacted",
+     "converted",
+     "customer",
+     "new",
+     "not_interested",
+     "replied"
+    ],
+    "kind": [
+     "any",
+     "organization",
+     "person"
+    ],
+    "search": [],
+    "mine_only": [],
+    "next_step_due_by": [],
+    "sort": [
+     "last_touched",
+     "name",
+     "newest",
+     "next_step_due",
+     "status_changed"
+    ],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "get_client",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "full_messages": []
+   }
   },
   {
    "name": "create_client",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "name": [],
+    "kind": [
+     "organization",
+     "person"
+    ],
+    "lead_source": [
+     "cold_call",
+     "email_campaign",
+     "event",
+     "inbound",
+     "linkedin",
+     "other",
+     "referral",
+     "website"
+    ],
+    "website": [],
+    "linkedin_url": [],
+    "industry": [],
+    "description": [],
+    "email": [],
+    "phone": [],
+    "address_line": [],
+    "city": [],
+    "postal_code": [],
+    "country_code": [],
+    "registration_number": [],
+    "vat_number": [],
+    "own_it": [],
+    "owner_user_id": [],
+    "contact_first_name": [],
+    "contact_last_name": [],
+    "contact_job_title": [],
+    "contact_email": [],
+    "contact_phone": [],
+    "contact_linkedin_url": [],
+    "create_anyway": []
+   }
   },
   {
    "name": "import_clients",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "rows": [],
+    "dry_run": []
+   }
   },
   {
    "name": "update_client",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "name": [],
+    "kind": [
+     "organization",
+     "person"
+    ],
+    "lead_source": [
+     "cold_call",
+     "email_campaign",
+     "event",
+     "inbound",
+     "linkedin",
+     "other",
+     "referral",
+     "website"
+    ],
+    "website": [],
+    "linkedin_url": [],
+    "industry": [],
+    "description": [],
+    "email": [],
+    "phone": [],
+    "address_line": [],
+    "city": [],
+    "postal_code": [],
+    "country_code": [],
+    "registration_number": [],
+    "vat_number": [],
+    "owner": [
+     "me",
+     "nobody",
+     "unchanged"
+    ],
+    "owner_user_id": []
+   }
   },
   {
    "name": "set_client_lead_status",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "lead_status": [
+     "contacted",
+     "new",
+     "not_interested",
+     "replied"
+    ],
+    "not_interested_reason": [
+     "bad_timing",
+     "has_provider",
+     "no_budget",
+     "no_reply",
+     "not_a_fit",
+     "other"
+    ],
+    "not_interested_note": []
+   }
   },
   {
    "name": "list_deals",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "board_id": [],
+    "status": [
+     "lost",
+     "open",
+     "won"
+    ],
+    "mine_only": [],
+    "search": [],
+    "sort": [
+     "biggest",
+     "closing_soonest",
+     "name",
+     "newest",
+     "recently_updated"
+    ],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "get_deal",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "deal_id": []
+   }
   },
   {
    "name": "create_deal",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "stage_id": [],
+    "name": [],
+    "running_contract": [],
+    "won_on": [],
+    "currency": [],
+    "estimated_value_cents": [],
+    "expected_close_on": [],
+    "probability": [],
+    "owner": [
+     "default",
+     "me"
+    ],
+    "owner_user_id": [],
+    "lines": []
+   }
   },
   {
    "name": "import_deals",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "rows": [],
+    "dry_run": []
+   }
   },
   {
    "name": "move_deal",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "deal_id": [],
+    "stage_id": [],
+    "position": [],
+    "lost_reason": [],
+    "lost_note": []
+   }
   },
   {
    "name": "mark_deal_won",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "deal_id": [],
+    "stage_id": [],
+    "closed_on": []
+   }
   },
   {
    "name": "mark_deal_lost",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "deal_id": [],
+    "lost_reason": [],
+    "lost_note": [],
+    "stage_id": [],
+    "closed_on": []
+   }
   },
   {
    "name": "list_products",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "search": [],
+    "include_archived": [],
+    "category": [],
+    "kind": [
+     "product",
+     "service"
+    ]
+   }
   },
   {
    "name": "import_products",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "rows": [],
+    "dry_run": []
+   }
   },
   {
    "name": "add_deal_line",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "deal_id": [],
+    "product_id": [],
+    "name": [],
+    "pricing_type": [
+     "fixed",
+     "milestones",
+     "recurring"
+    ],
+    "unit_price": [],
+    "vat_rate_percent": [],
+    "currency": [],
+    "kind": [
+     "product",
+     "service"
+    ],
+    "quantity": [],
+    "billing_period": [
+     "month",
+     "quarter",
+     "week",
+     "year"
+    ],
+    "starts_on": [],
+    "ends_on": [],
+    "earn_from": [],
+    "billing_timing": [
+     "in_advance",
+     "in_arrears"
+    ],
+    "milestones": []
+   }
   },
   {
    "name": "list_income",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "deal_id": [],
+    "status": [
+     "earned",
+     "invoiced",
+     "planned",
+     "void"
+    ]
+   }
   },
   {
    "name": "mark_income_delivered",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "income_id": [],
+    "earned_on": []
+   }
   },
   {
    "name": "list_invoices",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "status": [
+     "cancelled",
+     "draft",
+     "issued",
+     "paid",
+     "partially_paid"
+    ],
+    "unpaid": [],
+    "overdue": []
+   }
   },
   {
    "name": "get_invoice",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "invoice_id": []
+   }
   },
   {
    "name": "record_invoice_payment",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "invoice_id": [],
+    "amount": [],
+    "paid_on": [],
+    "method": [
+     "bank_transfer",
+     "card",
+     "cash",
+     "other"
+    ],
+    "reference": []
+   }
   },
   {
    "name": "list_bills",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "supplier": [],
+    "unpaid": [],
+    "overdue": []
+   }
   },
   {
    "name": "add_client_note",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "note": []
+   }
   },
   {
    "name": "log_client_touch",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "kind": [
+     "call",
+     "email",
+     "linkedin_message",
+     "meeting",
+     "task"
+    ],
+    "subject": [],
+    "note": [],
+    "outcome": [],
+    "deal_id": [],
+    "contact_id": [],
+    "done_at": [],
+    "message": [],
+    "message_subject": [],
+    "direction": [
+     "inbound",
+     "outbound"
+    ],
+    "teammate_user_id": [],
+    "new_contact": []
+   }
   },
   {
    "name": "log_client_touches",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "touches": []
+   }
   },
   {
    "name": "plan_client_next_step",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "kind": [
+     "call",
+     "email",
+     "linkedin_message",
+     "meeting",
+     "task"
+    ],
+    "subject": [],
+    "due_on": [],
+    "due_time": [],
+    "assigned_user_id": [],
+    "note": [],
+    "deal_id": [],
+    "contact_id": [],
+    "message": [],
+    "message_subject": []
+   }
   },
   {
    "name": "update_client_next_step",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "activity_id": [],
+    "kind": [
+     "call",
+     "email",
+     "linkedin_message",
+     "meeting",
+     "task"
+    ],
+    "subject": [],
+    "due_on": [],
+    "due_time": [],
+    "clear_due_time": [],
+    "assigned_user_id": [],
+    "contact_id": [],
+    "clear_contact": [],
+    "deal_id": [],
+    "clear_deal": [],
+    "message": [],
+    "message_subject": [],
+    "clear_message": [],
+    "note": [],
+    "clear_note": []
+   }
   },
   {
    "name": "complete_client_next_step",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "activity_id": [],
+    "outcome": [],
+    "message": [],
+    "follow_up_on": [],
+    "follow_up_subject": [],
+    "follow_up_message": [],
+    "teammate_user_id": [],
+    "done_at": []
+   }
   },
   {
    "name": "plan_client_next_steps",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "steps": []
+   }
   },
   {
    "name": "correct_client_touch",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "activity_id": [],
+    "kind": [
+     "call",
+     "email",
+     "linkedin_message",
+     "meeting",
+     "task"
+    ],
+    "subject": [],
+    "done_at": [],
+    "outcome": [],
+    "clear_outcome": [],
+    "contact_id": [],
+    "clear_contact": [],
+    "deal_id": [],
+    "clear_deal": [],
+    "message": [],
+    "message_subject": [],
+    "clear_message": [],
+    "note": [],
+    "clear_note": [],
+    "direction": [
+     "inbound",
+     "outbound"
+    ],
+    "teammate_user_id": []
+   }
   },
   {
    "name": "list_client_next_steps",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "due_by": [],
+    "assignee": [
+     "anyone",
+     "me"
+    ],
+    "kind": [
+     "call",
+     "email",
+     "linkedin_message",
+     "meeting",
+     "task"
+    ],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "add_client_contact",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "first_name": [],
+    "last_name": [],
+    "job_title": [],
+    "email": [],
+    "phone": [],
+    "linkedin_url": [],
+    "notes": [],
+    "make_primary": []
+   }
   },
   {
    "name": "update_client_contact",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "contact_id": [],
+    "first_name": [],
+    "last_name": [],
+    "job_title": [],
+    "email": [],
+    "phone": [],
+    "linkedin_url": [],
+    "notes": [],
+    "make_primary": []
+   }
   },
   {
    "name": "list_linkable_jobs",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "search": [],
+    "page_size": []
+   }
   },
   {
    "name": "link_job_to_client",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "job_id": [],
+    "line_item_id": []
+   }
   },
   {
    "name": "client_recruitment_report",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "client_id": [],
+    "deal_id": []
+   }
   },
   {
    "name": "list_questionnaires",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "purpose": [
+     "any",
+     "ats",
+     "onboarding",
+     "performance_review"
+    ],
+    "templates": [],
+    "include_inactive": [],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "get_questionnaire",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "form_id": []
+   }
   },
   {
    "name": "create_questionnaire",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "title": [],
+    "questions": [],
+    "description": [],
+    "purpose": [
+     "ats",
+     "onboarding",
+     "performance_review"
+    ],
+    "is_template": []
+   }
   },
   {
    "name": "list_responses",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "form_id": [],
+    "answered": [
+     "any",
+     "draft",
+     "submitted"
+    ],
+    "page": [],
+    "page_size": []
+   }
   },
   {
    "name": "get_response",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "form_id": [],
+    "response_id": []
+   }
   },
   {
    "name": "questionnaire_insights",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "form_id": [],
+    "version": []
+   }
   },
   {
    "name": "compare_responses",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "form_id": [],
+    "response_ids": []
+   }
   },
   {
    "name": "score_responses",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "form_id": [],
+    "page_size": []
+   }
   },
   {
    "name": "list_onboardings",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "state": [
+     "all",
+     "called_off",
+     "finished",
+     "running"
+    ],
+    "scope": [
+     "everyone",
+     "my_team"
+    ],
+    "search": []
+   }
   },
   {
    "name": "get_onboarding",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "onboarding_id": []
+   }
   },
   {
    "name": "list_onboarding_templates",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "active_only": []
+   }
   },
   {
    "name": "create_onboarding_template",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "name": [],
+    "steps": [],
+    "description": [],
+    "dry_run": []
+   }
   },
   {
    "name": "start_onboarding",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "template_id": [],
+    "employees": [],
+    "dated_from": []
+   }
   },
   {
    "name": "review_onboarding_step",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "onboarding_id": [],
+    "step_id": [],
+    "decision": [
+     "accept",
+     "send_back"
+    ],
+    "reason": []
+   }
   },
   {
    "name": "skip_onboarding_step",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "onboarding_id": [],
+    "step_id": [],
+    "reason": []
+   }
   },
   {
    "name": "shift_onboarding_dates",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "onboarding_id": [],
+    "dated_from": []
+   }
   },
   {
    "name": "my_onboarding",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": []
+   }
   },
   {
    "name": "get_onboarding_step_form",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "onboarding_id": [],
+    "step_id": []
+   }
   },
   {
    "name": "complete_onboarding_step",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "onboarding_id": [],
+    "step_id": [],
+    "note": [],
+    "on_behalf": []
+   }
   },
   {
    "name": "leave_balances",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "employee": [],
+    "year": [],
+    "page": [],
+    "limit": []
+   }
   },
   {
    "name": "my_leave_balance",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "year": []
+   }
   },
   {
    "name": "leave_balance_adjustments",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "balance_id": []
+   }
   },
   {
    "name": "import_leave_history",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "leaves": [],
+    "mode": [
+     "check",
+     "submit"
+    ]
+   }
   },
   {
    "name": "set_leave_entitlement",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "balance_id": [],
+    "mode": [
+     "custom",
+     "full",
+     "prorated"
+    ],
+    "custom_days": []
+   }
   },
   {
    "name": "who_is_away",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "start": [],
+    "end": [],
+    "scope": [
+     "everyone",
+     "my_team"
+    ],
+    "search": [],
+    "page": [],
+    "limit": []
+   }
   },
   {
    "name": "work_time_month",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "year": [],
+    "month": [],
+    "employee": [],
+    "page": [],
+    "limit": []
+   }
   },
   {
    "name": "list_review_cycles",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "kind": [
+     "any",
+     "performance_review",
+     "survey"
+    ],
+    "state": [
+     "any",
+     "cancelled",
+     "draft",
+     "finished",
+     "running"
+    ],
+    "search": [],
+    "page": [],
+    "limit": []
+   }
   },
   {
    "name": "get_review_cycle",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": []
+   }
   },
   {
    "name": "preview_review_launch",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": []
+   }
   },
   {
    "name": "review_progress",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": [],
+    "outstanding_only": []
+   }
   },
   {
    "name": "list_review_subjects",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": []
+   }
   },
   {
    "name": "get_review_results",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": [],
+    "about": []
+   }
   },
   {
    "name": "survey_results",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": []
+   }
   },
   {
    "name": "list_my_reviews",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "kind": [
+     "performance_review",
+     "survey"
+    ]
+   }
   },
   {
    "name": "my_review_results",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "cycle_id": []
+   }
   },
   {
    "name": "create_review_cycle",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "name": [],
+    "kind": [
+     "performance_review",
+     "survey"
+    ],
+    "due_date": [],
+    "period_start": [],
+    "period_end": [],
+    "questionnaire_id": [],
+    "is_anonymous": [],
+    "stays_open": []
+   }
   },
   {
    "name": "add_review_reviewer",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "cycle_id": [],
+    "reviewer": [],
+    "about": [],
+    "questionnaire_id": [],
+    "group": [
+     "manager",
+     "peer",
+     "upward"
+    ]
+   }
   },
   {
    "name": "remind_review_cycle",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "cycle_id": []
+   }
   },
   {
    "name": "list_teammates",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "search": []
+   }
   },
   {
    "name": "create_task",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "title": [],
+    "assignee_user_ids": [],
+    "description": [],
+    "link_to": [
+     "application",
+     "candidate",
+     "employee",
+     "job",
+     "none",
+     "questionnaire",
+     "questionnaire_response"
+    ],
+    "link_id": [],
+    "due_date": [],
+    "priority": [
+     "high",
+     "normal",
+     "urgent"
+    ],
+    "skip_if_already_asked": [],
+    "parent_task_id": []
+   }
   },
   {
    "name": "list_company_tasks",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "assigned_to": [],
+    "about": [
+     "any",
+     "application",
+     "candidate",
+     "employee",
+     "job",
+     "questionnaire",
+     "questionnaire_response"
+    ],
+    "about_id": [],
+    "state": [
+     "all",
+     "done",
+     "open"
+    ],
+    "priority": [
+     "high",
+     "normal",
+     "urgent"
+    ],
+    "due_before": [],
+    "due": [
+     "any",
+     "later",
+     "none",
+     "overdue",
+     "today",
+     "week"
+    ],
+    "module": [],
+    "created_by": [],
+    "search": [],
+    "sort": [
+     "created_at",
+     "due_date",
+     "priority"
+    ],
+    "page": [],
+    "limit": []
+   }
   },
   {
    "name": "task_summary",
-   "read_only": true
+   "read_only": true,
+   "args": {
+    "company_id": [],
+    "whose": [
+     "delegated",
+     "mine",
+     "team"
+    ]
+   }
   },
   {
    "name": "update_task",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "task_id": [],
+    "title": [],
+    "description": [],
+    "assignee_user_id": [],
+    "due_date": [],
+    "priority": [
+     "high",
+     "normal",
+     "urgent"
+    ],
+    "clear_due_date": [],
+    "clear_description": []
+   }
   },
   {
    "name": "complete_task",
-   "read_only": false
+   "read_only": false,
+   "args": {
+    "company_id": [],
+    "task_id": []
+   }
   }
  ]
 }
