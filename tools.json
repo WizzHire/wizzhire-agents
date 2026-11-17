@@ -1,6 +1,6 @@
 {
  "source": "dropcv_core/agent_tools/registry.py",
- "commit": "9f8621d4f",
+ "commit": "9e5def8a2",
  "tools": [
   {
    "name": "list_my_companies",
@@ -12,6 +12,14 @@
   },
   {
    "name": "list_jobs",
+   "read_only": true
+  },
+  {
+   "name": "get_job",
+   "read_only": true
+  },
+  {
+   "name": "search_talent_pool",
    "read_only": true
   },
   {
@@ -433,18 +441,50 @@
   {
    "name": "complete_task",
    "read_only": false
-  }
- ],
- "pending": [
-  {
-   "name": "get_job",
-   "read_only": true,
-   "note": "PR feat/mcp-get-job-talent-pool"
   },
   {
-   "name": "search_talent_pool",
-   "read_only": true,
-   "note": "PR feat/mcp-get-job-talent-pool; company talent pool, agreed consent only"
+   "name": "find_companies_as_admin",
+   "read_only": true
+  },
+  {
+   "name": "create_managed_company",
+   "read_only": false
+  },
+  {
+   "name": "update_careers_page",
+   "read_only": false
+  },
+  {
+   "name": "set_company_images",
+   "read_only": false
+  },
+  {
+   "name": "get_picture_upload_link",
+   "read_only": false
+  },
+  {
+   "name": "add_team_member",
+   "read_only": false
+  },
+  {
+   "name": "update_team_member",
+   "read_only": false
+  },
+  {
+   "name": "get_managed_company",
+   "read_only": true
+  },
+  {
+   "name": "create_managed_job",
+   "read_only": false
+  },
+  {
+   "name": "publish_managed_job",
+   "read_only": false
+  },
+  {
+   "name": "invite_company_owner",
+   "read_only": false
   }
  ]
 }
