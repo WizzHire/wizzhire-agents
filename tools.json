@@ -1,0 +1,438 @@
+{
+ "source": "dropcv_core/agent_tools/registry.py",
+ "commit": "9f8621d4f",
+ "tools": [
+  {
+   "name": "list_my_companies",
+   "read_only": true
+  },
+  {
+   "name": "wizzhire_guide",
+   "read_only": true
+  },
+  {
+   "name": "list_jobs",
+   "read_only": true
+  },
+  {
+   "name": "create_job_draft",
+   "read_only": false
+  },
+  {
+   "name": "list_candidates",
+   "read_only": true
+  },
+  {
+   "name": "get_candidate",
+   "read_only": true
+  },
+  {
+   "name": "read_application",
+   "read_only": true
+  },
+  {
+   "name": "compare_candidates",
+   "read_only": true
+  },
+  {
+   "name": "candidate_sources",
+   "read_only": true
+  },
+  {
+   "name": "rate_candidate",
+   "read_only": false
+  },
+  {
+   "name": "add_candidate_note",
+   "read_only": false
+  },
+  {
+   "name": "star_candidate",
+   "read_only": false
+  },
+  {
+   "name": "review_queue",
+   "read_only": true
+  },
+  {
+   "name": "list_my_tasks",
+   "read_only": true
+  },
+  {
+   "name": "prepare_employee_import",
+   "read_only": false
+  },
+  {
+   "name": "get_employee_overview",
+   "read_only": true
+  },
+  {
+   "name": "list_employees",
+   "read_only": true
+  },
+  {
+   "name": "list_my_team",
+   "read_only": true
+  },
+  {
+   "name": "list_leave_requests",
+   "read_only": true
+  },
+  {
+   "name": "decide_leave_request",
+   "read_only": false
+  },
+  {
+   "name": "assign_shifts",
+   "read_only": false
+  },
+  {
+   "name": "swap_shifts",
+   "read_only": false
+  },
+  {
+   "name": "review_timesheet_day",
+   "read_only": true
+  },
+  {
+   "name": "fill_timesheet_day",
+   "read_only": false
+  },
+  {
+   "name": "record_timesheet_day",
+   "read_only": false
+  },
+  {
+   "name": "undo_timesheet_day",
+   "read_only": false
+  },
+  {
+   "name": "list_crm_boards",
+   "read_only": true
+  },
+  {
+   "name": "crm_board",
+   "read_only": true
+  },
+  {
+   "name": "list_clients",
+   "read_only": true
+  },
+  {
+   "name": "get_client",
+   "read_only": true
+  },
+  {
+   "name": "create_client",
+   "read_only": false
+  },
+  {
+   "name": "import_clients",
+   "read_only": false
+  },
+  {
+   "name": "update_client",
+   "read_only": false
+  },
+  {
+   "name": "set_client_lead_status",
+   "read_only": false
+  },
+  {
+   "name": "list_deals",
+   "read_only": true
+  },
+  {
+   "name": "get_deal",
+   "read_only": true
+  },
+  {
+   "name": "create_deal",
+   "read_only": false
+  },
+  {
+   "name": "import_deals",
+   "read_only": false
+  },
+  {
+   "name": "move_deal",
+   "read_only": false
+  },
+  {
+   "name": "mark_deal_won",
+   "read_only": false
+  },
+  {
+   "name": "mark_deal_lost",
+   "read_only": false
+  },
+  {
+   "name": "list_products",
+   "read_only": true
+  },
+  {
+   "name": "import_products",
+   "read_only": false
+  },
+  {
+   "name": "add_deal_line",
+   "read_only": false
+  },
+  {
+   "name": "list_income",
+   "read_only": true
+  },
+  {
+   "name": "mark_income_delivered",
+   "read_only": false
+  },
+  {
+   "name": "list_invoices",
+   "read_only": true
+  },
+  {
+   "name": "get_invoice",
+   "read_only": true
+  },
+  {
+   "name": "record_invoice_payment",
+   "read_only": false
+  },
+  {
+   "name": "list_bills",
+   "read_only": true
+  },
+  {
+   "name": "add_client_note",
+   "read_only": false
+  },
+  {
+   "name": "log_client_touch",
+   "read_only": false
+  },
+  {
+   "name": "log_client_touches",
+   "read_only": false
+  },
+  {
+   "name": "plan_client_next_step",
+   "read_only": false
+  },
+  {
+   "name": "update_client_next_step",
+   "read_only": false
+  },
+  {
+   "name": "complete_client_next_step",
+   "read_only": false
+  },
+  {
+   "name": "plan_client_next_steps",
+   "read_only": false
+  },
+  {
+   "name": "correct_client_touch",
+   "read_only": false
+  },
+  {
+   "name": "list_client_next_steps",
+   "read_only": true
+  },
+  {
+   "name": "add_client_contact",
+   "read_only": false
+  },
+  {
+   "name": "update_client_contact",
+   "read_only": false
+  },
+  {
+   "name": "list_linkable_jobs",
+   "read_only": true
+  },
+  {
+   "name": "link_job_to_client",
+   "read_only": false
+  },
+  {
+   "name": "client_recruitment_report",
+   "read_only": true
+  },
+  {
+   "name": "list_questionnaires",
+   "read_only": true
+  },
+  {
+   "name": "get_questionnaire",
+   "read_only": true
+  },
+  {
+   "name": "create_questionnaire",
+   "read_only": false
+  },
+  {
+   "name": "list_responses",
+   "read_only": true
+  },
+  {
+   "name": "get_response",
+   "read_only": true
+  },
+  {
+   "name": "questionnaire_insights",
+   "read_only": true
+  },
+  {
+   "name": "compare_responses",
+   "read_only": true
+  },
+  {
+   "name": "score_responses",
+   "read_only": true
+  },
+  {
+   "name": "list_onboardings",
+   "read_only": true
+  },
+  {
+   "name": "get_onboarding",
+   "read_only": true
+  },
+  {
+   "name": "list_onboarding_templates",
+   "read_only": true
+  },
+  {
+   "name": "create_onboarding_template",
+   "read_only": false
+  },
+  {
+   "name": "start_onboarding",
+   "read_only": false
+  },
+  {
+   "name": "review_onboarding_step",
+   "read_only": false
+  },
+  {
+   "name": "skip_onboarding_step",
+   "read_only": false
+  },
+  {
+   "name": "shift_onboarding_dates",
+   "read_only": false
+  },
+  {
+   "name": "my_onboarding",
+   "read_only": true
+  },
+  {
+   "name": "get_onboarding_step_form",
+   "read_only": true
+  },
+  {
+   "name": "complete_onboarding_step",
+   "read_only": false
+  },
+  {
+   "name": "leave_balances",
+   "read_only": true
+  },
+  {
+   "name": "my_leave_balance",
+   "read_only": true
+  },
+  {
+   "name": "leave_balance_adjustments",
+   "read_only": true
+  },
+  {
+   "name": "import_leave_history",
+   "read_only": false
+  },
+  {
+   "name": "set_leave_entitlement",
+   "read_only": false
+  },
+  {
+   "name": "who_is_away",
+   "read_only": true
+  },
+  {
+   "name": "work_time_month",
+   "read_only": true
+  },
+  {
+   "name": "list_review_cycles",
+   "read_only": true
+  },
+  {
+   "name": "get_review_cycle",
+   "read_only": true
+  },
+  {
+   "name": "preview_review_launch",
+   "read_only": true
+  },
+  {
+   "name": "review_progress",
+   "read_only": true
+  },
+  {
+   "name": "list_review_subjects",
+   "read_only": true
+  },
+  {
+   "name": "get_review_results",
+   "read_only": true
+  },
+  {
+   "name": "survey_results",
+   "read_only": true
+  },
+  {
+   "name": "list_my_reviews",
+   "read_only": true
+  },
+  {
+   "name": "my_review_results",
+   "read_only": true
+  },
+  {
+   "name": "create_review_cycle",
+   "read_only": false
+  },
+  {
+   "name": "add_review_reviewer",
+   "read_only": false
+  },
+  {
+   "name": "remind_review_cycle",
+   "read_only": false
+  },
+  {
+   "name": "list_teammates",
+   "read_only": true
+  },
+  {
+   "name": "create_task",
+   "read_only": false
+  },
+  {
+   "name": "list_company_tasks",
+   "read_only": true
+  },
+  {
+   "name": "task_summary",
+   "read_only": true
+  },
+  {
+   "name": "update_task",
+   "read_only": false
+  },
+  {
+   "name": "complete_task",
+   "read_only": false
+  }
+ ]
+}

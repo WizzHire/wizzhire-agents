@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wizzhire": {
+      "type": "http",
+      "url": "https://api.wizzhire.com/mcp"
+    }
+  }
+}

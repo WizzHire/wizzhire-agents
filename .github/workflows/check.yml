@@ -1,0 +1,27 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Tool names exist
+        run: python3 scripts/check_tools.py
+      - name: No long dashes
+        run: |
+          if grep -rnP "\x{2014}|\x{2013}" --include=*.md --include=*.json .; then
+            echo "Use a comma, colon or hyphen instead of a long dash."; exit 1
+          fi
+      - name: Skills package
+        run: sh scripts/package_skills.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: skills
+          path: dist/*.zip

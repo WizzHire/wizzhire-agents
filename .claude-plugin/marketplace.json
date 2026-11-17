@@ -1,0 +1,12 @@
+{
+  "name": "wizzhire",
+  "owner": { "name": "WizzHire", "url": "https://wizzhire.com" },
+  "metadata": { "description": "WizzHire skills and agents for Claude Code." },
+  "plugins": [
+    {
+      "name": "wizzhire",
+      "source": "./",
+      "description": "Skills and agents that run whole WizzHire jobs (ATS, HR and CRM) through the WizzHire MCP connector."
+    }
+  ]
+}

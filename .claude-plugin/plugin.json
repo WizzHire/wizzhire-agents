@@ -1,0 +1,22 @@
+{
+  "name": "wizzhire",
+  "version": "0.1.0",
+  "description": "Ready-made skills and agents that run whole WizzHire jobs (ATS, HR and CRM) through the WizzHire MCP connector. A person makes every decision.",
+  "author": {
+    "name": "WizzHire",
+    "url": "https://wizzhire.com"
+  },
+  "homepage": "https://wizzhire.com/en/features/ai",
+  "license": "MIT",
+  "keywords": [
+    "wizzhire",
+    "ats",
+    "hr",
+    "crm",
+    "mcp",
+    "recruiting",
+    "onboarding",
+    "leave"
+  ],
+  "privacyPolicyUrl": "https://wizzhire.com/en/privacy"
+}
