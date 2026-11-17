@@ -441,50 +441,6 @@
   {
    "name": "complete_task",
    "read_only": false
-  },
-  {
-   "name": "find_companies_as_admin",
-   "read_only": true
-  },
-  {
-   "name": "create_managed_company",
-   "read_only": false
-  },
-  {
-   "name": "update_careers_page",
-   "read_only": false
-  },
-  {
-   "name": "set_company_images",
-   "read_only": false
-  },
-  {
-   "name": "get_picture_upload_link",
-   "read_only": false
-  },
-  {
-   "name": "add_team_member",
-   "read_only": false
-  },
-  {
-   "name": "update_team_member",
-   "read_only": false
-  },
-  {
-   "name": "get_managed_company",
-   "read_only": true
-  },
-  {
-   "name": "create_managed_job",
-   "read_only": false
-  },
-  {
-   "name": "publish_managed_job",
-   "read_only": false
-  },
-  {
-   "name": "invite_company_owner",
-   "read_only": false
   }
  ]
 }
