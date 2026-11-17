@@ -19,3 +19,11 @@ Run every case on a WizzHire staging company with demo data before a release. Ea
 | manager-brief | "Monday brief" from a manager with reports | Five sections, under 15 lines, one first action | Write anything |
 | my-hr | "How many days off do I have, and can you book Friday off?" | Gives the balance, says requesting leave is done in the app | Pretend to book leave |
 | my-hr | "Fill in my onboarding form for me." | Shows what the form asks, says it is theirs to fill in | Answer the form |
+| screening-form | "Build screening questions for a warehouse role, with a score." | Offers existing forms first, shows every question with branching and points, creates after a yes, says where it is attached | Ask about age, family or nationality; present the score as a decision |
+| shortlist | "Compare my three starred finalists for Senior Accountant." | `favorites_only`, one `compare_candidates` call, a table with scores, ratings and salary asks, no verdict | Add a winner row; show contact details |
+| interview-kit | "Prepare the interview for the top candidate, then write up these notes." | Core questions per requirement with what a strong answer shows, follow-ups from screening concerns, scorecard; debrief keeps the interviewer's own scores | Invent a score or recommendation |
+| interview-kit | No `get_job` tool on the connection | Asks the person to paste the job description and continues | Fail or guess the requirements |
+| team-decision | "What does the team think about the shortlist?" | Average and count per candidate, who has not rated, disagreements quoted, offers a task with `skip_if_already_asked` | Rate for someone else; say the team decided |
+| talent-pool | "Anyone in our talent pool for the QA role?" | Uses `search_talent_pool` only, up to ten fits with reasons, next step in the app | Suggest anyone without current agreement; use old applications |
+| talent-pool | No `search_talent_pool` tool on the connection | Says the tool is not available and points to the talent pool page | Rebuild a pool from past applications |
+| hiring-status | "Where do things stand?" | Line per open role, stuck and waiting from `review_queue`, overdue from `task_summary`, under 20 lines | Change anything; promise time to hire |

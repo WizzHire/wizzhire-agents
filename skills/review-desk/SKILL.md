@@ -1,6 +1,6 @@
 ---
 name: review-desk
-description: Go through the WizzHire candidates waiting on you, most urgent first, with a short brief for each against the job's own requirements, and record your notes, stars, ratings or a task for a colleague. Use for "who is waiting on me", "review candidates", "what should I look at today", "ko čeka na mene", "pregled kandidata".
+description: Go through the WizzHire candidates waiting on you, most urgent first, with a short evidence-based brief for each, and record your notes, stars, ratings or a task for a colleague. Use for "who is waiting on me", "review candidates", "what should I look at today", "ko čeka na mene", "pregled kandidata".
 ---
 
 # Review desk
@@ -18,7 +18,7 @@ Clear the candidate review queue with the person: who is waiting, why, and what 
 2. **Brief the first few.** For up to five candidates, or the ones the person picks:
    - `get_candidate` for the stage, the WizzAI screening breakdown, the team's ratings and notes, outstanding requirements and the salary asked.
    - `read_application` for the CV text, cover letter and answers.
-   - Write three or four lines per candidate: how they match each of the job's requirements, quoting the CV where it matters; what is missing or unclear; what the team already said. Include the WizzAI score with its reasons when there is one, and say it is an assessment to check, not a decision.
+   - Write three or four lines per candidate: how they fit the job, using the screening breakdown's strengths and concerns and quoting the CV where it matters; what is missing or unclear; what the team already said. If the person pastes the job's requirements, brief against each one. (The tools do not return a job's description or requirements yet.) Include the WizzAI score with its reasons when there is one, and say it is an assessment to check, not a decision.
 3. **Side by side, when asked.** For finalists on one job, call `compare_candidates` (two to six) and lay out scores, ratings, requirement progress, salary asks and skills in one table. Do not add a verdict.
 4. **Record what the person decides to record**, one candidate at a time:
    - a note for the team: `add_candidate_note`

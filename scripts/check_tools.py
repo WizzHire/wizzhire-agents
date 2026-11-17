@@ -19,12 +19,15 @@ TOOL_WORD = re.compile(r"`([a-z]+(?:_[a-z]+)+)`")
 NOT_TOOLS = {
     "copy_stages_from_job_id", "on_behalf", "dated_from", "dry_run", "create_anyway", "stage_id",
     "closed_on", "won_on", "earn_from", "running_contract", "source_days", "show_salary", "show_if",
-    "link_to", "cycle_id", "fixed_term", "my_team",
+    "link_to", "cycle_id", "fixed_term", "my_team", "favorites_only", "only_sitting_too_long",
+    "is_template", "skip_if_already_asked",
 }
 
 
 def main() -> int:
-    known = {t["name"] for t in json.loads((ROOT / "tools.json").read_text())["tools"]}
+    data = json.loads((ROOT / "tools.json").read_text())
+    known = {t["name"] for t in data["tools"]}
+    pending = {t["name"] for t in data.get("pending", [])}
     files = sorted([*ROOT.glob("skills/*/SKILL.md"), *ROOT.glob("agents/*.md")])
     problems: list[str] = []
     used: set[str] = set()
@@ -34,6 +37,8 @@ def main() -> int:
                 continue
             if word in known:
                 used.add(word)
+            elif word in pending:
+                print(f"{path.relative_to(ROOT)}: `{word}` is pending on the server, the skill must work without it")
             else:
                 problems.append(f"{path.relative_to(ROOT)}: `{word}` is not a WizzHire tool")
     for p in problems:

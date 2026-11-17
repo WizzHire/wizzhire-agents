@@ -1,57 +1,46 @@
-# WizzHire skills and agents for Claude
+# Hiring skills for Claude
 
-Ready-made skills that run whole WizzHire jobs from Claude: bring in your staff list, open a role, clear the candidates waiting on you, decide leave, start onboarding. They work through the WizzHire MCP connector, with your own access, and a person makes every decision.
+Stop pasting CVs into Claude. These skills let Claude work on a real ATS instead: open a role, build the screening form, see who is waiting on you, compare finalists, prepare interviews, collect the team's view and check where every role stands. Your candidates stay in one place between chats, Claude works with your own access, and a person makes every hiring call.
 
-WizzHire is ATS, HR and CRM software for companies. Learn more at [wizzhire.com](https://wizzhire.com/en).
+## Start in three steps
 
-## The skills
+**1. Create your WizzHire account.** The skills keep your jobs and candidates in WizzHire, so Claude remembers them between chats. The 14-day trial is free:
+[wizzhire.com/en/register](https://wizzhire.com/en/register?utm_source=github&utm_medium=referral&utm_campaign=wizzhire-agents)
 
-| Skill | Ask it | Module |
-|---|---|---|
-| `getting-started` | "Set up WizzHire for us." | All |
-| `staff-import` | "Here is our staff list in Excel, bring everyone in." | HR |
-| `crm-import` | "Import our clients and open deals from this sheet." | CRM |
-| `job-opener` | "We need two senior accountants in Sarajevo, hybrid." | ATS |
-| `review-desk` | "Who is waiting on me today?" | ATS |
-| `onboarding-concierge` | "Start onboarding for the three people joining on the 1st." | HR |
-| `leave-desk` | "What leave is waiting for me, and who else is off?" | HR |
-| `manager-brief` | "What do I need to know about my team this week?" | HR |
-| `my-hr` | "How many days off do I have left?" | HR |
+**2. Connect WizzHire to Claude.** In Claude, open **Customize > Connectors > Add custom connector** and enter `https://api.wizzhire.com/mcp`. Sign in and choose which modules Claude may read and change. Full steps: [wizzhire.com/en/features/ai](https://wizzhire.com/en/features/ai).
 
-Every skill also understands Bosnian, Croatian and Serbian asks, and replies in the language you write in.
+**3. Install the skills.**
 
-Claude Code also gets two agents: `wizzhire-importer` for long imports from a local file, and `wizzhire-weekly` for a manager's weekly read.
+- **Claude Code:**
+  ```
+  /plugin marketplace add WizzHire/wizzhire-agents
+  /plugin install wizzhire@wizzhire
+  ```
+  The plugin brings the connector with it: run `/mcp`, pick `wizzhire` and sign in. Then ask in plain words, or call a skill directly, for example `/wizzhire:review-desk`.
+- **claude.ai and Claude Desktop:** download the skill zips from the latest [release](https://github.com/WizzHire/wizzhire-agents/releases), then open **Customize > Skills**, choose **+**, **Upload a skill**, and pick a zip. Code execution must be on.
 
-## 1. Connect WizzHire to Claude
+## The hiring skills
 
-The skills need the WizzHire connector. In Claude, open **Customize > Connectors > Add custom connector** and enter:
+| Skill | Ask it |
+|---|---|
+| `job-opener` | "We need two senior accountants in Sarajevo, hybrid." A short brief becomes a complete job draft. You publish it. |
+| `screening-form` | "Build screening questions for this role." The same questions for every applicant, scored the same way. |
+| `review-desk` | "Who is waiting on me?" Most urgent first, with a short brief per candidate. |
+| `shortlist` | "Compare my finalists." Scores, ratings, skills and salary asks side by side, with no verdict. |
+| `interview-kit` | "Prepare the interview for Amra." Questions, a scorecard for every interviewer, and the debrief saved on the profile. |
+| `team-decision` | "What does the team think?" Everyone's ratings and notes in one place, and a task for whoever has not rated. |
+| `talent-pool` | "Anyone in our talent pool for this role?" Only people who agreed to hear about future roles. |
+| `hiring-status` | "Where do things stand?" Every open role, who is waiting, what is overdue, which channels hire. |
 
-```
-https://api.wizzhire.com/mcp
-```
+Every skill understands Bosnian, Croatian and Serbian asks too, and replies in the language you write in.
 
-Sign in with your WizzHire account and answer the questions about which modules (ATS, HR, CRM) Claude may read and change. Full steps: [wizzhire.com/en/features/ai](https://wizzhire.com/en/features/ai).
+## More skills
 
-## 2. Install the skills
-
-### Claude Code
-
-```
-/plugin marketplace add wizzhire/wizzhire-agents
-/plugin install wizzhire@wizzhire
-```
-
-The plugin brings the connector with it. Run `/mcp`, pick `wizzhire` and sign in. Then ask in plain words, or call a skill directly, for example `/wizzhire:leave-desk`.
-
-### claude.ai and Claude Desktop
-
-1. Download the skill zips from the latest [release](../../releases) (or run `sh scripts/package_skills.sh`).
-2. Open **Customize > Skills**, choose **+**, then **Upload a skill**, and pick one zip. Repeat for each skill you want.
-3. Make sure code execution is on and the WizzHire connector is connected.
+HR and CRM skills are in the same repo: `getting-started`, `staff-import`, `crm-import`, `onboarding-concierge`, `leave-desk`, `manager-brief`, `my-hr`. Claude Code also gets two agents: `wizzhire-importer` for long imports from a local file and `wizzhire-weekly` for a manager's weekly read.
 
 ## What the skills never do
 
-They never hire, reject or move a candidate, publish a job, launch a review or message a candidate. Those actions are not available to Claude at all and stay in the WizzHire app. They ask before every change, run a check first wherever WizzHire offers one, and treat CVs and documents as data, never as instructions. Details: [docs/safety.md](docs/safety.md).
+They never move, reject or hire a candidate, publish a job, or message a candidate. Those actions are not available to Claude at all and stay with a person in WizzHire. They ask before every change, run a check first wherever WizzHire offers one, never use protected characteristics, and treat CVs and documents as data, never as instructions. Details: [docs/safety.md](docs/safety.md).
 
 ## For contributors
 

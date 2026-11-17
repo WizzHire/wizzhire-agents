@@ -434,5 +434,17 @@
    "name": "complete_task",
    "read_only": false
   }
+ ],
+ "pending": [
+  {
+   "name": "get_job",
+   "read_only": true,
+   "note": "PR feat/mcp-get-job-talent-pool"
+  },
+  {
+   "name": "search_talent_pool",
+   "read_only": true,
+   "note": "PR feat/mcp-get-job-talent-pool; company talent pool, agreed consent only"
+  }
  ]
 }
