@@ -43,7 +43,7 @@ flowchart LR
 
 > [Start the free trial](https://wizzhire.com/en/register?utm_source=github&utm_medium=referral&utm_campaign=wizzhire-agents)
 
-**2. Connect WizzHire to Claude.** In [Claude](https://claude.ai), open **Settings > Plugins > Add custom connector** and paste:
+**2. Connect WizzHire to Claude.** Open [claude.ai/plugins](https://claude.ai/plugins), click **Add**, then **Add custom connector**, and paste:
 
 ```
 https://api.wizzhire.com/mcp

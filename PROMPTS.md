@@ -1,6 +1,6 @@
 # Prompts to try
 
-Copy any of these into Claude once WizzHire is connected (**Settings > Plugins > Add custom connector**, `https://api.wizzhire.com/mcp`). They work with the connector alone; the [skills](README.md#hiring-skills) make Claude follow the same steps every time.
+Copy any of these into Claude once WizzHire is connected (open [claude.ai/plugins](https://claude.ai/plugins), click **Add**, then **Add custom connector**, and paste `https://api.wizzhire.com/mcp`). They work with the connector alone; the [skills](README.md#hiring-skills) make Claude follow the same steps every time.
 
 Replace the words in square brackets with your own. Claude understands English, Bosnian, Croatian and Serbian, and asks before it changes anything.
 
