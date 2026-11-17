@@ -14,7 +14,7 @@ Ready-made skills and agents that open roles, review candidates, prepare intervi
 ![Agents](https://img.shields.io/badge/Claude%20Code%20agents-6-0A1630)
 ![Works in](https://img.shields.io/badge/works%20in-Claude%20Code%20%C2%B7%20claude.ai%20%C2%B7%20Desktop-64748D)
 
-[Get started](#get-started-in-three-steps) · [Hiring skills](#hiring-skills) · [Hiring agents](#hiring-agents-for-claude-code) · [HR and CRM](#hr-and-crm-skills) · [Safety](#what-claude-never-does) · [FAQ](#faq)
+[Get started](#get-started-in-three-steps) · [Prompts](PROMPTS.md) · [Hiring skills](#hiring-skills) · [Hiring agents](#hiring-agents-for-claude-code) · [HR and CRM](#hr-and-crm-skills) · [Safety](#what-claude-never-does) · [FAQ](#faq)
 
 </div>
 
@@ -39,11 +39,11 @@ flowchart LR
 
 ## Get started in three steps
 
-**1. Create your WizzHire account.** The skills keep your hiring in WizzHire so Claude remembers it between chats. The 14-day trial is free, or request a demo on [wizzhire.com](https://wizzhire.com/en).
+**1. Create your WizzHire account.** WizzHire keeps your hiring so Claude remembers it between chats. The 14-day trial is free, or request a demo on [wizzhire.com](https://wizzhire.com/en).
 
 > [Start the free trial](https://wizzhire.com/en/register?utm_source=github&utm_medium=referral&utm_campaign=wizzhire-agents)
 
-**2. Connect WizzHire to Claude.** In Claude, open **Customize > Connectors > Add custom connector** and enter:
+**2. Connect WizzHire to Claude.** In [Claude](https://claude.ai), open **Settings > Plugins > Add custom connector** and paste:
 
 ```
 https://api.wizzhire.com/mcp
@@ -51,7 +51,17 @@ https://api.wizzhire.com/mcp
 
 Sign in, then choose which modules (ATS, HR, CRM) Claude may read and change. Full steps: [wizzhire.com/en/features/ai](https://wizzhire.com/en/features/ai).
 
-**3. Install the skills.**
+**3. Ask Claude.** No installs needed. Paste one of these:
+
+| New account | Every day |
+|---|---|
+| "Draft a job in WizzHire for a senior accountant in Sarajevo, hybrid." | "Who is waiting on me in WizzHire?" |
+| "Check that job ad: is anything missing that candidates look for?" | "Compare my starred candidates for that role." |
+| "Write interview questions and a scorecard for that job." | "Where do things stand with our hiring?" |
+
+Twenty more, for every hiring flow: [PROMPTS.md](PROMPTS.md).
+
+### Want Claude to follow the same steps every time? Add the skills
 
 <table>
 <tr><th>Claude Code</th><th>claude.ai and Claude Desktop</th></tr>
@@ -74,8 +84,6 @@ Code execution must be on, and the WizzHire connector connected.
 
 </td></tr>
 </table>
-
-Then try: **"Who is waiting on me?"**
 
 ---
 

@@ -1,0 +1,49 @@
+name: Something did not work
+description: A skill or agent did something wrong, or Claude could not use WizzHire.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Please do not paste candidate, employee or client personal data** (names, emails, CVs) here: this page is public. Describe what happened in general terms.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill, agent or prompt
+      description: For example review-desk, hiring-analyst, or "connector only".
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: Where were you using it?
+      options:
+        - claude.ai
+        - Claude Desktop
+        - Claude Code
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: asked
+    attributes:
+      label: What did you ask?
+      placeholder: '"Who is waiting on me in WizzHire?"'
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: Include the error text if Claude showed one. Remove any personal data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: input
+    id: version
+    attributes:
+      label: Release
+      description: For example v0.3.0. Claude Code shows it under /plugin.

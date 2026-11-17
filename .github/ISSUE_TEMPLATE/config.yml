@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Help with your WizzHire account
+    url: https://wizzhire.com/en
+    about: Questions about your account, plan or data go to WizzHire, not to this public page.
+  - name: Report a security problem
+    url: https://github.com/WizzHire/wizzhire-agents/security/advisories/new
+    about: Report privately. Please do not open a public issue for security problems.
