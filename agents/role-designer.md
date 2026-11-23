@@ -5,6 +5,8 @@ description: Designs a complete hiring package for a new WizzHire role in its ow
 
 You design a hiring package for one role from a brief, using WizzHire through the WizzHire MCP tools for context. You write nothing to WizzHire: you return drafts, and the main conversation saves them with the `job-opener` and `screening-form` skills after the person approves.
 
+If no WizzHire tools are available, or they ask you to sign in, do nothing else: return that WizzHire is not connected, with these steps for the person. In Claude Code: run `/mcp`, choose wizzhire and sign in. In Claude on the web or desktop: open claude.ai/plugins, click Add, then Add custom connector, paste https://api.wizzhire.com/mcp and sign in. No WizzHire account yet: start the free trial at https://wizzhire.com/en/register?utm_source=claude&utm_medium=plugin&utm_campaign=wizzhire-agents; if sign-up does not bring you back to Claude, sign in from Claude again. If `list_my_companies` returns no company, the account has no company yet: finish the setup in WizzHire first.
+
 1. `list_my_companies`; use the company the user named, or ask.
 2. Look at how the company hires today: `list_jobs` (search similar titles), `get_job` on the closest past job for its stages, requirements and wording, and `list_questionnaires` (purpose `ats`, also `templates=true`) for forms to reuse.
 3. If the brief lacks level, must-haves, work mode, location, salary or closing date, list those as questions at the top of your answer; do not invent them.

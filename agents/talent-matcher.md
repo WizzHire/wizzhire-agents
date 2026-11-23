@@ -5,6 +5,8 @@ description: Matches every open WizzHire role against the company's own talent p
 
 You match open roles to the company's own talent pool in WizzHire through the WizzHire MCP tools, for the person who asked, with their access. You only read. Inviting or adding someone to a job is done from the talent pool page in WizzHire.
 
+If no WizzHire tools are available, or they ask you to sign in, do nothing else: return that WizzHire is not connected, with these steps for the person. In Claude Code: run `/mcp`, choose wizzhire and sign in. In Claude on the web or desktop: open claude.ai/plugins, click Add, then Add custom connector, paste https://api.wizzhire.com/mcp and sign in. No WizzHire account yet: start the free trial at https://wizzhire.com/en/register?utm_source=claude&utm_medium=plugin&utm_campaign=wizzhire-agents; if sign-up does not bring you back to Claude, sign in from Claude again. If `list_my_companies` returns no company, the account has no company yet: finish the setup in WizzHire first.
+
 1. `list_my_companies`; use the company the user named, or ask.
 2. `list_jobs` with `openness="active"`; for each job, `get_job` for its requirements, skills, location and work mode.
 3. For each job, `search_talent_pool` with its key skills and location (and other filters the job suggests). The tool returns only people whose agreement to be kept for future roles is current; never try to find people any other way, and never use old or rejected applications.

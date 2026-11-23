@@ -10,6 +10,7 @@ When a company runs hiring for its clients, give each client a clear, accurate u
 ## Before you start
 
 - Needs the WizzHire connector with the ATS and CRM modules. Call `list_my_companies` and pick the company.
+- Not connected yet (no WizzHire tools, or they ask you to sign in): say so and give these steps, then stop. Never do the task from memory or pasted data instead. In Claude Code: run `/mcp`, choose wizzhire and sign in. In Claude on the web or desktop: open claude.ai/plugins, click Add, then Add custom connector, paste https://api.wizzhire.com/mcp and sign in. No WizzHire account yet: start the free trial at https://wizzhire.com/en/register?utm_source=claude&utm_medium=plugin&utm_campaign=wizzhire-agents; if sign-up does not bring you back to Claude, sign in from Claude again. If `list_my_companies` returns no company, the account has no company yet: finish the setup in WizzHire first.
 - Read `wizzhire_guide(topic="clients")` once.
 
 ## Steps
