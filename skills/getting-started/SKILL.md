@@ -9,7 +9,8 @@ Help a company that just connected WizzHire to Claude find its first three usefu
 
 ## Before you start
 
-- This needs the WizzHire connector. If no WizzHire tools are available, say so and point to https://wizzhire.com/en/features/ai for how to connect it.
+- This needs the WizzHire connector.
+- Not connected yet (no WizzHire tools, or they ask you to sign in): say so and give these steps, then stop. Never do the task from memory or pasted data instead. In Claude Code: run `/mcp`, choose wizzhire and sign in. In Claude on the web or desktop: open claude.ai/plugins, click Add, then Add custom connector, paste https://api.wizzhire.com/mcp and sign in. No WizzHire account yet: start the free trial at https://wizzhire.com/en/register?utm_source=claude&utm_medium=plugin&utm_campaign=wizzhire-agents; if sign-up does not bring you back to Claude, sign in from Claude again. If `list_my_companies` returns no company, the account has no company yet: finish the setup in WizzHire first.
 - Call `list_my_companies`. If the person belongs to more than one company, ask which one.
 - Note which modules the company has (ATS, HR, CRM) and the person's role. Only suggest work in modules they have.
 

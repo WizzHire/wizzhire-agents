@@ -10,6 +10,7 @@ Move a team into WizzHire HR from whatever the company has today. People arrive 
 ## Before you start
 
 - Needs the WizzHire connector and the HR module. Call `list_my_companies` and pick the company.
+- Not connected yet (no WizzHire tools, or they ask you to sign in): say so and give these steps, then stop. Never do the task from memory or pasted data instead. In Claude Code: run `/mcp`, choose wizzhire and sign in. In Claude on the web or desktop: open claude.ai/plugins, click Add, then Add custom connector, paste https://api.wizzhire.com/mcp and sign in. No WizzHire account yet: start the free trial at https://wizzhire.com/en/register?utm_source=claude&utm_medium=plugin&utm_campaign=wizzhire-agents; if sign-up does not bring you back to Claude, sign in from Claude again. If `list_my_companies` returns no company, the account has no company yet: finish the setup in WizzHire first.
 - Read `wizzhire_guide(topic="people")` before the first write.
 - The person needs permission to add employees. If a tool refuses, say what was refused in plain words and stop.
 
